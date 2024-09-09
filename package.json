@@ -12,7 +12,9 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "type-check": "vue-tsc --noEmit"
+    "typecheck": "npx nuxi typecheck",
+    "analyze": "npx nuxi analyze",
+    "clean": "npx nuxi cleanup"
   },
   "dependencies": {
     "@ark-ui/vue": "^3.11.0",
