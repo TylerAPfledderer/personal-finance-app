@@ -1,4 +1,5 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
+import { colors } from "./tokens/colors";
 
 export default {
   content: [
@@ -8,8 +9,7 @@ export default {
     "./components/**/*.vue",
   ],
   theme: {
-    extend: {},
+    colors,
   },
   plugins: [],
-} satisfies Config
-
+} satisfies Config;
