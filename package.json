@@ -14,7 +14,10 @@
     "format:check": "prettier --check .",
     "typecheck": "npx nuxi typecheck",
     "analyze": "npx nuxi analyze",
-    "clean": "npx nuxi cleanup"
+    "clean": "npx nuxi cleanup",
+    "story:dev": "histoire dev",
+    "story:build": "histoire build",
+    "story:preview": "histoire preview"
   },
   "dependencies": {
     "@ark-ui/vue": "3.12.0",
@@ -25,6 +28,9 @@
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@histoire/plugin-nuxt": "^0.17.17",
+    "@histoire/plugin-vue": "^0.17.17",
+    "histoire": "^0.17.17",
     "prettier": "3.3.3",
     "prettier-plugin-tailwindcss": "0.6.6",
     "typescript": "5.6.0-beta",
