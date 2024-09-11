@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import { colors } from "./tokens/colors";
+import { fontFamily, fontSize } from "./tokens/typography";
 
 export default {
   content: [
@@ -10,6 +11,8 @@ export default {
   ],
   theme: {
     colors,
+    fontFamily,
+    fontSize,
   },
   plugins: [],
 } satisfies Config;

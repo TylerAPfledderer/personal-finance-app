@@ -5,5 +5,5 @@ import { HstNuxt } from "@histoire/plugin-nuxt";
 export default defineConfig({
   plugins: [HstVue(), HstNuxt()],
   setupFile: "/utils/histoire-setup.ts",
-  storyMatch: ["**/*.stories.vue"],
+  storyMatch: ["**/*.story.vue"],
 });
