@@ -13,6 +13,16 @@ export default {
     colors,
     fontFamily,
     fontSize,
+    spacing: {
+      500: "40px",
+      400: "32px",
+      300: "24px",
+      250: "20px",
+      200: "16px",
+      150: "12px",
+      100: "8px",
+      50: "4px",
+    },
   },
   plugins: [],
 } satisfies Config;
