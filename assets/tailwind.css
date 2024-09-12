@@ -6,6 +6,6 @@
 
 @layer base {
   body {
-    @apply font-body text-preset-4;
+    @apply font-body text-preset-4 text-grey-900;
   }
 }
