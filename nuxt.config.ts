@@ -8,14 +8,21 @@ export default defineNuxtConfig({
 
   typescript: {
     typeCheck: true,
+    tsConfig: {
+      include: ["env.d.ts"],
+    },
   },
 
-  modules: ["@nuxt/eslint", "@nuxtjs/tailwindcss"],
+  modules: ["@nuxt/eslint", "@nuxtjs/tailwindcss", "@nuxt/image"],
 
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+
+  components: {
+    dirs: [],
   },
 });
