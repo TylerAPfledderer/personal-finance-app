@@ -15,7 +15,7 @@
     "typecheck": "npx nuxi typecheck",
     "analyze": "npx nuxi analyze",
     "clean": "npx nuxi cleanup",
-    "story:dev": "histoire dev",
+    "story:dev": "histoire dev --open",
     "story:build": "histoire build",
     "story:preview": "histoire preview"
   },
