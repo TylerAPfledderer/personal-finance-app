@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400,700&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,4 +6,17 @@
   body {
     @apply font-body text-preset-4 text-grey-900;
   }
+}
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/PublicSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/PublicSans-Bold.ttf") format("truetype");
 }

@@ -6,4 +6,7 @@ export default defineConfig({
   plugins: [HstVue(), HstNuxt()],
   setupFile: "/utils/histoire-setup.ts",
   storyMatch: ["**/*.story.vue"],
+  vite: {
+    publicDir: "./public",
+  },
 });
