@@ -21,7 +21,6 @@ export const selectTriggerStyles = selectStyles().trigger();
 <script setup lang="ts">
 import { Select } from "@ark-ui/vue";
 import { cnBase, tv } from "tailwind-variants";
-import { PhCaretDown, PhCircle, PhCheckCircle } from "@phosphor-icons/vue";
 import { colorTags } from "../../../../utils/color-tags";
 
 import { inputClasses } from "./Input.vue";

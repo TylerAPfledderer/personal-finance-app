@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { Pagination } from "@ark-ui/vue";
 import { tv, cnBase } from "tailwind-variants";
-import { PhCaretLeft, PhCaretRight } from "@phosphor-icons/vue";
 import data from "../../../data.json";
 
 const commonButtonClassStyles =
@@ -32,7 +31,7 @@ const paginationStyles = tv({
       :class="paginationStyles.trigger()"
       aria-label="Previous page"
     >
-      <PhCaretLeft weight="fill" />
+      <IconCaretLeft />
       <span class="max-sm:hidden"> Prev </span>
     </Pagination.PrevTrigger>
     <div class="flex gap-2">
@@ -63,7 +62,7 @@ const paginationStyles = tv({
       aria-label="Next page"
     >
       <span class="max-sm:hidden"> Next </span>
-      <PhCaretRight weight="fill" />
+      <IconCaretRight />
     </Pagination.NextTrigger>
   </Pagination.Root>
 </template>

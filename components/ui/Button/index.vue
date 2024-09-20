@@ -1,16 +1,15 @@
 <script setup lang="ts">
 import { tv } from "tailwind-variants";
-import { PhCaretRight } from "@phosphor-icons/vue";
 
 const buttonStyles = tv({
-  base: "p-4 rounded-lg border border-[current] font-bold",
+  base: "rounded-lg border border-[current] p-4 font-bold",
   variants: {
     variant: {
       primary: "bg-grey-900 text-white hover:bg-grey-500",
       secondary:
         "border-[transparent] bg-beige-100 hover:border-beige-500 hover:bg-white",
       tertiary:
-        "p-0 gap-3 inline-flex items-center border-[transparent] hover:text-grey-500",
+        "inline-flex items-center gap-3 border-[transparent] p-0 hover:text-grey-500",
       danger: "bg-red text-white hover:bg-red/80",
     },
   },
@@ -30,7 +29,7 @@ const props = defineProps<ButtonProps>();
   <button :class="buttonStyles({ variant: props.variant })">
     <span>{{ label }}</span>
     <div v-if="props.variant === 'tertiary'">
-      <PhCaretRight weight="fill" />
+      <IconCaretRight />
     </div>
   </button>
 </template>

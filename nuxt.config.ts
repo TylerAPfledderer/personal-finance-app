@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/eslint", "@nuxtjs/tailwindcss", "@nuxt/image"],
+  modules: ["@nuxt/eslint", "@nuxtjs/tailwindcss", "@nuxt/image", "nuxt-svgo"],
 
   postcss: {
     plugins: {
@@ -24,5 +24,10 @@ export default defineNuxtConfig({
 
   components: {
     dirs: [],
+  },
+
+  svgo: {
+    global: false,
+    componentPrefix: "icon",
   },
 });

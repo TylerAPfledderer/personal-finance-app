@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import InputField from "./InputField.vue";
 import SelectField from "./SelectField.vue";
-import { PhMagnifyingGlass } from "@phosphor-icons/vue";
+import { IconSearch } from "#components";
 </script>
 <template>
   <Story title="ui / Form Fields">
@@ -10,7 +10,7 @@ import { PhMagnifyingGlass } from "@phosphor-icons/vue";
         helper="Helper text"
         label="basic field"
         placeholder="Placeholder"
-        :right-element="PhMagnifyingGlass"
+        :right-element="IconSearch"
       />
     </Variant>
     <Variant title="Select">
