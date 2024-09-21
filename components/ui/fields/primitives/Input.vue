@@ -3,14 +3,13 @@ export const inputClasses =
   "rounded-lg border border-beige-500 px-200 py-150 outline-none placeholder:text-beige-500 hover:border-grey-500 focus-visible:border focus-visible:border-grey-900";
 
 export type InputProps = FieldInputProps & {
-  leftElement?: VNode;
-  rightElement?: VNode;
+  leftElement?: Object;
+  rightElement?: Object;
 };
 </script>
 <script lang="ts" setup>
 import { useFieldContext, type FieldInputProps } from "@ark-ui/vue";
 import { cnBase } from "tailwind-variants";
-import type { VNode } from "vue";
 import { mergeProps, type InputHTMLAttributes } from "vue";
 
 defineOptions({
