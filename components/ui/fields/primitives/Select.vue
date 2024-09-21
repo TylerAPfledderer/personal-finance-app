@@ -54,13 +54,13 @@ watch(model, (value) => {
             )
           "
         >
-          <PhCircle weight="fill" />
+          <IconCircleFill />
         </span>
 
         <Select.Trigger :class="selectTriggerStyles">
           <Select.ValueText placeholder="Select a Color" />
           <Select.Indicator class="data-[state='open']:rotate-180">
-            <PhCaretDown weight="fill" />
+            <IconCaretDown />
           </Select.Indicator>
         </Select.Trigger>
       </div>
@@ -78,8 +78,7 @@ watch(model, (value) => {
                 :item="item"
                 class="inline-flex cursor-pointer items-center gap-150 [&[data-disabled]]:cursor-not-allowed"
               >
-                <PhCircle
-                  weight="fill"
+                <IconCircleFill
                   :class="cnBase(item.hue, item.disabled && 'opacity-15')"
                 />
                 <Select.ItemText :class="item.disabled && 'text-grey-500'">{{
@@ -87,7 +86,7 @@ watch(model, (value) => {
                 }}</Select.ItemText>
                 <div class="ms-auto">
                   <Select.ItemIndicator v-if="!item.disabled">
-                    <PhCheckCircle weight="fill" class="text-green" />
+                    <IconBillPaid weight="fill" class="text-green" />
                   </Select.ItemIndicator>
                   <span v-else class="text-grey-500">Already used</span>
                 </div>

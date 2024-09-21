@@ -23,7 +23,16 @@ export default defineNuxtConfig({
   },
 
   components: {
-    dirs: [],
+    dirs: [
+      {
+        path: "~/components/ui/fields",
+        prefix: "Ui",
+      },
+      {
+        path: "~/components",
+        ignore: ["**/*.story.vue"],
+      },
+    ],
   },
 
   svgo: {

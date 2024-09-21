@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { Pagination } from "@ark-ui/vue";
 import { tv, cnBase } from "tailwind-variants";
-import data from "../../../data.json";
+import data from "~/data.json";
 
 const commonButtonClassStyles =
   "px-4 py-2 border border-beige-500 rounded-lg [&:not([disabled])]:hover:bg-beige-500 [&:not([disabled])]:hover:text-white";

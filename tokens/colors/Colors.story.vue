@@ -4,15 +4,15 @@ import ColorBlockWrapper from "./ColorsBlockWrap.vue";
 </script>
 <template>
   <Story title="tokens / Colors">
-    <div class="gap-8 flex flex-col">
-      <div class="gap-4 flex flex-col">
+    <div class="flex flex-col gap-8">
+      <div class="flex flex-col gap-4">
         <h2 class="text-2xl font-bold">Beige</h2>
         <ColorBlockWrapper>
           <ColorsBlock bg-color-class="bg-beige-500" label="Beige 500" />
           <ColorsBlock bg-color-class="bg-beige-100" label="Beige 100" />
         </ColorBlockWrapper>
       </div>
-      <div class="gap-4 flex flex-col">
+      <div class="flex flex-col gap-4">
         <h2 class="text-2xl font-bold">Grey</h2>
         <ColorBlockWrapper>
           <ColorsBlock bg-color-class="bg-grey-900" label="Grey 900" />
@@ -21,7 +21,7 @@ import ColorBlockWrapper from "./ColorsBlockWrap.vue";
           <ColorsBlock bg-color-class="bg-grey-100" label="Grey 100" />
         </ColorBlockWrapper>
       </div>
-      <div class="gap-4 flex flex-col">
+      <div class="flex flex-col gap-4">
         <h2 class="text-2xl font-bold">Secondary Colors</h2>
         <ColorBlockWrapper>
           <ColorsBlock bg-color-class="bg-green" label="Green" />
@@ -32,7 +32,7 @@ import ColorBlockWrapper from "./ColorsBlockWrap.vue";
           <ColorsBlock bg-color-class="bg-purple" label="Purple" />
         </ColorBlockWrapper>
       </div>
-      <div class="gap-4 flex flex-col">
+      <div class="flex flex-col gap-4">
         <h2 class="text-2xl font-bold">Other Colors</h2>
         <ColorBlockWrapper>
           <ColorsBlock bg-color-class="bg-pink" label="Pink" />
@@ -46,7 +46,7 @@ import ColorBlockWrapper from "./ColorsBlockWrap.vue";
           <ColorsBlock bg-color-class="bg-orange" label="Orange" />
         </ColorBlockWrapper>
       </div>
-      <div class="gap-4 flex flex-col">
+      <div class="flex flex-col gap-4">
         <h2 class="text-2xl font-bold">White</h2>
         <ColorBlockWrapper>
           <ColorsBlock bg-color-class="bg-white" label="White" />

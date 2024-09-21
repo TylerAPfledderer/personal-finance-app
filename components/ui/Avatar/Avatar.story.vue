@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import Avatar from "./index.vue";
-
 const avatarImgList = [
   "aqua-flow-utilities.jpg",
   "buzz-marketing-group.jpg",
@@ -38,7 +36,7 @@ const avatarImgList = [
   <Story title="ui / Avatar">
     <Variant title="md Size">
       <div class="grid grid-cols-4 gap-8">
-        <Avatar
+        <UiAvatar
           v-for="img in avatarImgList"
           :key="img"
           :src="`/images/avatars/${img}`"
@@ -47,7 +45,7 @@ const avatarImgList = [
     </Variant>
     <Variant title="sm Size">
       <div class="grid grid-cols-4 gap-8">
-        <Avatar
+        <UiAvatar
           v-for="img in avatarImgList"
           :key="img"
           :src="`/images/avatars/${img}`"

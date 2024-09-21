@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import InputField from "./InputField.vue";
-import SelectField from "./SelectField.vue";
 import { IconSearch } from "#components";
 </script>
 <template>
   <Story title="ui / Form Fields">
     <Variant title="Input">
-      <InputField
+      <UiInputField
         helper="Helper text"
         label="basic field"
         placeholder="Placeholder"
@@ -14,7 +12,7 @@ import { IconSearch } from "#components";
       />
     </Variant>
     <Variant title="Select">
-      <SelectField helper="Helper text" label="basic field" />
+      <UiSelectField helper="Helper text" label="basic field" />
     </Variant>
   </Story>
 </template>
