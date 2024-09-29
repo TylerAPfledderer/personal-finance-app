@@ -33,6 +33,8 @@
   "devDependencies": {
     "@histoire/plugin-nuxt": "^0.17.17",
     "@histoire/plugin-vue": "^0.17.17",
+    "@vueuse/core": "^11.1.0",
+    "@vueuse/nuxt": "^11.1.0",
     "histoire": "^0.17.17",
     "prettier": "3.3.3",
     "prettier-plugin-tailwindcss": "0.6.6",

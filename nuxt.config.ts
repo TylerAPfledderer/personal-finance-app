@@ -13,7 +13,13 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/eslint", "@nuxtjs/tailwindcss", "@nuxt/image", "nuxt-svgo"],
+  modules: [
+    "@nuxt/eslint",
+    "@nuxtjs/tailwindcss",
+    "@nuxt/image",
+    "nuxt-svgo",
+    "@vueuse/nuxt",
+  ],
 
   postcss: {
     plugins: {
