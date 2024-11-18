@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { mergeProps } from "vue";
-import FieldWrapper, { type FieldWrapperProps } from "./FieldWrapper.vue";
+import FieldWrapper, {
+  type FieldWrapperProps,
+} from "./FieldWrapper.client.vue";
 import UISelect, { type SelectProps } from "./primitives/Select.vue";
 
 defineOptions({

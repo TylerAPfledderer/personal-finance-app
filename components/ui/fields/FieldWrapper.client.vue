@@ -1,5 +1,9 @@
 <script lang="ts">
-export type FieldWrapperProps = { label: string; helper?: string };
+export type FieldWrapperProps = {
+  label: string;
+  helper?: string;
+  errorMessage?: string;
+};
 </script>
 
 <script lang="ts" setup>
@@ -13,8 +17,12 @@ defineProps<FieldWrapperProps>();
       {{ label }}
     </FieldLabel>
     <slot></slot>
-    <FieldHelperText class="justify-self-end text-preset-5 text-grey-500">
+    <FieldHelperText
+      v-show="helper"
+      class="justify-self-end text-preset-5 text-grey-500"
+    >
       {{ helper }}
     </FieldHelperText>
+    <span class="text-red">{{ errorMessage }}</span>
   </FieldRoot>
 </template>

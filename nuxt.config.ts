@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "nuxt-svgo",
     "@vueuse/nuxt",
+    "@nuxtjs/supabase",
   ],
 
   postcss: {
@@ -44,5 +45,9 @@ export default defineNuxtConfig({
   svgo: {
     global: false,
     componentPrefix: "icon",
+  },
+
+  supabase: {
+    redirect: false,
   },
 });
