@@ -2,8 +2,9 @@
 <template>
   <div class="contents">
     <OverviewBalanceGroup />
-    <div class="grid">
+    <div class="grid gap-4">
       <OverviewPots />
+      <OverviewTransactions />
     </div>
   </div>
 </template>

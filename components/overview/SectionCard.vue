@@ -10,7 +10,7 @@ defineProps<{
 }>();
 </script>
 <template>
-  <div class="grid gap-5 rounded-xl bg-white px-5 py-6">
+  <div class="grid gap-5 rounded-xl bg-white px-5 py-6 md:gap-8 md:p-8">
     <div class="flex items-center justify-between">
       <h2 class="text-preset-2">{{ capitalize(heading) }}</h2>
       <UiButton
