@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     "nuxt-svgo",
     "@vueuse/nuxt",
     "@nuxtjs/supabase",
+    "@pinia/nuxt",
   ],
 
   postcss: {
