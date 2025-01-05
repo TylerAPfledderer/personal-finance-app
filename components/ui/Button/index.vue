@@ -2,15 +2,15 @@
 import { tv } from "tailwind-variants";
 
 const buttonStyles = tv({
-  base: "rounded-lg border border-[current] p-4 font-bold",
+  base: "rounded-lg border border-[current] p-4 text-preset-4-bold",
   variants: {
     variant: {
       primary: "bg-grey-900 text-white hover:bg-grey-500",
       secondary:
         "border-[transparent] bg-beige-100 hover:border-beige-500 hover:bg-white",
       tertiary:
-        "inline-flex items-center gap-3 border-[transparent] p-0 hover:text-grey-500",
-      danger: "bg-red text-white hover:bg-red/80",
+        "inline-flex items-center gap-3 border-[transparent] p-0 text-preset-4 hover:text-grey-500",
+      danger: "hover:bg-red/80 bg-red text-white",
     },
   },
   defaultVariants: {
@@ -29,7 +29,7 @@ const props = defineProps<ButtonProps>();
   <button :class="buttonStyles({ variant: props.variant })">
     <span>{{ label }}</span>
     <div v-if="props.variant === 'tertiary'">
-      <IconCaretRight />
+      <IconCaretRight class="text-[12px]" />
     </div>
   </button>
 </template>
