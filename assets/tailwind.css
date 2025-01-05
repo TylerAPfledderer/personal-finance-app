@@ -3,6 +3,30 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --colors-beige-100: #f8f4f0;
+    --colors-beige-500: #98908b;
+    --colors-grey-100: #f2f2f2;
+    --colors-grey-300: #b3b3b3;
+    --colors-grey-500: #696868;
+    --colors-grey-900: #201f24;
+    --colors-green: #277c78;
+    --colors-yellow: #f2cdac;
+    --colors-cyan: #82c9d7;
+    --colors-navy: #626070;
+    --colors-navy-grey: #97a0ac;
+    --colors-red: #c94736;
+    --colors-purple: #826cb0;
+    --colors-pink: #af81ba;
+    --colors-turqoise: #597c7c;
+    --colors-brown: #93674f;
+    --colors-magenta: #934f6f;
+    --colors-blue: #3f82b2;
+    --colors-army-green: #7f9161;
+    --colors-gold: #cab381;
+    --colors-orange: #be6c49;
+    --colors-white: #ffffff;
+  }
   body {
     @apply bg-beige-100 font-body text-preset-4 text-grey-900;
   }

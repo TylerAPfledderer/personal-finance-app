@@ -1,85 +1,85 @@
 export const colorTags: Array<{
   name: Capitalize<string>;
   value: string;
-  hue: `text-${string}`;
+  hueCSSVar: `var(--colors-${string})`;
   disabled?: boolean;
 }> = [
   {
     name: "Green",
     value: "green",
-    hue: "text-green",
+    hueCSSVar: "var(--colors-green)",
   },
   {
     name: "Yellow",
     value: "yellow",
-    hue: "text-yellow",
+    hueCSSVar: "var(--colors-yellow)",
     disabled: true,
   },
   {
     name: "Cyan",
     value: "cyan",
-    hue: "text-cyan",
+    hueCSSVar: "var(--colors-cyan)",
   },
   {
     name: "Navy",
     value: "navy",
-    hue: "text-navy",
+    hueCSSVar: "var(--colors-navy)",
     disabled: true,
   },
   {
     name: "Red",
     value: "red",
-    hue: "text-red",
+    hueCSSVar: "var(--colors-red)",
     disabled: true,
   },
   {
     name: "Purple",
     value: "purple",
-    hue: "text-purple",
+    hueCSSVar: "var(--colors-purple)",
   },
   {
     name: "Turqoise",
     value: "turqoise",
-    hue: "text-turqoise",
+    hueCSSVar: "var(--colors-turqoise)",
   },
   {
     name: "Brown",
     value: "brown",
-    hue: "text-brown",
+    hueCSSVar: "var(--colors-brown)",
   },
   {
     name: "Magenta",
     value: "magenta",
-    hue: "text-magenta",
+    hueCSSVar: "var(--colors-magenta)",
   },
   {
     name: "Blue",
     value: "blue",
-    hue: "text-blue",
+    hueCSSVar: "var(--colors-blue)",
   },
   {
     name: "Navy Grey",
     value: "navy-grey",
-    hue: "text-navy-grey",
+    hueCSSVar: "var(--colors-navy-grey)",
   },
   {
     name: "Army Green",
     value: "army-green",
-    hue: "text-army-green",
+    hueCSSVar: "var(--colors-army-green)",
   },
   {
     name: "Pink",
     value: "pink",
-    hue: "text-pink",
+    hueCSSVar: "var(--colors-pink)",
   },
   {
     name: "Gold",
     value: "gold",
-    hue: "text-gold",
+    hueCSSVar: "var(--colors-gold)",
   },
   {
     name: "Orange",
     value: "orange",
-    hue: "text-orange",
+    hueCSSVar: "var(--colors-orange)",
   },
 ];

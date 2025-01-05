@@ -47,10 +47,11 @@ watch(model, (value) => {
     <Select.Control>
       <div class="grid [&>*]:[grid-area:1/1]">
         <span
+          :style="{ '--circle-color': selectedItem?.hueCSSVar }"
           :class="
             cnBase(
               'z-10 self-center justify-self-start ps-200 text-preset-3',
-              selectedItem?.hue,
+              'text-[--circle-color]',
             )
           "
         >
@@ -79,7 +80,13 @@ watch(model, (value) => {
                 class="inline-flex cursor-pointer items-center gap-150 [&[data-disabled]]:cursor-not-allowed"
               >
                 <IconCircleFill
-                  :class="cnBase(item.hue, item.disabled && 'opacity-15')"
+                  :style="{ '--circle-option-color': item.hueCSSVar }"
+                  :class="
+                    cnBase(
+                      'text-[--circle-option-color]',
+                      item.disabled && 'opacity-15',
+                    )
+                  "
                 />
                 <Select.ItemText :class="item.disabled && 'text-grey-500'">{{
                   item.name
