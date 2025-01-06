@@ -404,22 +404,26 @@ export const useFinanceStore = defineStore("financeStore", () => {
     {
       category: "Entertainment",
       maximum: 50.0,
-      theme: "#277C78",
+      current: 15.0,
+      theme: "--colors-green",
     },
     {
       category: "Bills",
       maximum: 750.0,
-      theme: "#82C9D7",
+      current: 150.0,
+      theme: "--colors-cyan",
     },
     {
       category: "Dining Out",
       maximum: 75.0,
-      theme: "#F2CDAC",
+      current: 133.75,
+      theme: "--colors-yellow",
     },
     {
       category: "Personal Care",
       maximum: 100.0,
-      theme: "#626070",
+      current: 40.0,
+      theme: "--colors-navy",
     },
   ]);
 
@@ -428,25 +432,25 @@ export const useFinanceStore = defineStore("financeStore", () => {
       name: "Savings",
       target: 2000.0,
       total: 159.0,
-      theme: "var(--colors-green)",
+      theme: "--colors-green",
     },
     {
       name: "Concert Ticket",
       target: 150.0,
       total: 110.0,
-      theme: "var(--colors-navy)",
+      theme: "--colors-navy",
     },
     {
       name: "Gift",
       target: 150.0,
       total: 40.0,
-      theme: "var(--colors-cyan)",
+      theme: "--colors-cyan",
     },
     {
       name: "New Laptop",
       target: 1000.0,
       total: 10.0,
-      theme: "var(--colors-yellow)",
+      theme: "--colors-yellow",
     },
     {
       name: "Holiday",

@@ -69,7 +69,7 @@ const toggleMinimizedMenu = () => {
 </script>
 <template>
   <div
-    class="w-full bg-grey-900 text-grey-300 max-lg:fixed max-lg:bottom-0 max-lg:rounded-t-lg lg:flex lg:h-dvh lg:max-w-[300px] lg:flex-col lg:gap-6 lg:rounded-e-lg lg:pb-6"
+    class="z-50 w-full bg-grey-900 text-grey-300 max-lg:fixed max-lg:bottom-0 max-lg:rounded-t-lg lg:flex lg:h-dvh lg:max-w-[300px] lg:flex-col lg:gap-6 lg:rounded-e-lg lg:pb-6"
     :class="minimizedMenu && isLargerThanLg && 'w-fit'"
   >
     <div

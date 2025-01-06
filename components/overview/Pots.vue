@@ -7,7 +7,11 @@ const overallBalance = computed(() => {
   return pots.value.reduce((acc, pot) => acc + pot.total, 0);
 });
 
-const limitedPotList = computed(() => pots.value.slice(0, 4));
+const limitedPotList = computed(() =>
+  pots.value
+    .slice(0, 4)
+    .map(({ name, theme, total }) => ({ name, theme, amount: total })),
+);
 </script>
 <template>
   <!--Pots-->
@@ -27,17 +31,7 @@ const limitedPotList = computed(() => pots.value.slice(0, 4));
           </div>
         </div>
       </div>
-      <div class="grid w-full grid-cols-2 gap-4">
-        <template v-for="{ name, total, theme } in limitedPotList">
-          <div :style="{ '--pot-theme': theme }" class="flex gap-4">
-            <div class="w-1 rounded-lg bg-[--pot-theme]" />
-            <div class="grid gap-1">
-              <div class="text-preset-5 text-grey-500">{{ name }}</div>
-              <div class="text-preset-4-bold">{{ formatCurrency(total) }}</div>
-            </div>
-          </div>
-        </template>
-      </div>
+      <OverviewAmountGrid :list="limitedPotList" />
     </div>
   </OverviewSectionCard>
 </template>
