@@ -6,7 +6,7 @@ defineProps<{ bgColorClass: `bg-${string}`; label: string }>();
     <div
       :class="[
         bgColorClass,
-        bgColorClass === 'bg-white' && 'border-grey-900 border',
+        bgColorClass === 'bg-white' && 'border border-grey-900',
       ]"
       class="h-24 w-80 rounded-xl"
     />
