@@ -16,11 +16,11 @@ const limitedPotList = computed(() =>
 <template>
   <!--Pots-->
   <OverviewSectionCard heading="pots" :link-props="{ label: 'See Details' }">
-    <div class="grid gap-5 md:flex">
+    <div
+      class="flex flex-col justify-between gap-5 justify-self-stretch md:flex-row lg:flex-col 2xl:flex-row"
+    >
       <!--Total Saved-->
-      <div
-        class="flex w-full max-w-[247px] items-center gap-4 rounded-xl bg-beige-100 p-4"
-      >
+      <div class="flex items-center gap-4 rounded-xl bg-beige-100 p-4">
         <div>
           <IconPot class="text-[40px] text-green" />
         </div>

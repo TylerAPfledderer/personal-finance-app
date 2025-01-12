@@ -14,6 +14,9 @@ export default {
     fontFamily,
     fontSize,
     extend: {
+      screens: {
+        "2xl": "1440px",
+      },
       spacing: {
         500: "40px",
         400: "32px",

@@ -38,42 +38,44 @@ onMounted(() => {
 </script>
 <template>
   <OverviewSectionCard heading="budgets" :link-props="{ label: 'See Details' }">
-    <div class="grid gap-4 md:grid-cols-[1fr,100px]">
-      <div class="relative mx-auto flex w-full max-w-[240px]">
-        <Doughnut
-          class="z-[1]"
-          :data="{
-            datasets: [
-              {
-                data: graphDatasets,
-                backgroundColor: graphDataColors,
-              },
-            ],
-            labels: graphLabels,
-          }"
-          :options="{
-            cutout: '70%',
-            plugins: {
-              tooltip: {
-                callbacks: {
-                  label: ({ raw }) => formatCurrency(raw as number),
+    <div class="flex size-full flex-col justify-center">
+      <div class="grid gap-4 md:grid-cols-[1fr,100px]">
+        <div class="relative mx-auto flex w-full max-w-[240px]">
+          <Doughnut
+            class="z-[1]"
+            :data="{
+              datasets: [
+                {
+                  data: graphDatasets,
+                  backgroundColor: graphDataColors,
+                },
+              ],
+              labels: graphLabels,
+            }"
+            :options="{
+              cutout: '70%',
+              plugins: {
+                tooltip: {
+                  callbacks: {
+                    label: ({ raw }) => formatCurrency(raw as number),
+                  },
                 },
               },
-            },
-          }"
-        />
-        <div class="absolute inset-0 grid place-items-center">
-          <div class="grid justify-items-center gap-2">
-            <div class="text-preset-1">
-              {{ formatCurrency(budgetCurr) }}
-            </div>
-            <div class="text-preset-5 text-grey-500">
-              of {{ formatCurrency(budgetMaximum) }} limit
+            }"
+          />
+          <div class="absolute inset-0 grid place-items-center">
+            <div class="grid justify-items-center gap-2">
+              <div class="text-preset-1">
+                {{ formatCurrency(budgetCurr) }}
+              </div>
+              <div class="text-preset-5 text-grey-500">
+                of {{ formatCurrency(budgetMaximum) }} limit
+              </div>
             </div>
           </div>
         </div>
+        <OverviewAmountGrid class="md:grid-cols-1" :list="limitedBudgetList" />
       </div>
-      <OverviewAmountGrid class="md:grid-cols-1" :list="limitedBudgetList" />
     </div>
   </OverviewSectionCard>
 </template>
