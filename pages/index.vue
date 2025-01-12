@@ -11,7 +11,7 @@
     </div>
   </div>
 </template>
-<style lang="postcss" scoped>
+<style lang="postcss">
 .grid-cascade {
   & > :nth-child(1) {
     @apply row-[1/2] xl:order-1;
@@ -22,11 +22,11 @@
   }
 
   & > :nth-child(3) {
-    @apply xl:order-2 2xl:col-[2] 2xl:row-[1/3];
+    @apply xl:order-2 2xl:col-[2] 2xl:row-[1/5];
   }
 
   & > :nth-child(4) {
-    @apply xl:order-4 2xl:col-[2] 2xl:row-[3/6];
+    @apply xl:order-4 2xl:col-[2] 2xl:row-[5/6];
   }
 }
 </style>
