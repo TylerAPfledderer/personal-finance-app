@@ -46,7 +46,6 @@ const isLargerThanLg = useMediaQuery(`(min-width: ${lgBp})`);
 const minimizedMenu = ref(false);
 
 onBeforeMount(() => {
-  console.log("beforeMounted");
   const isLocalMenuMinimized = localStorage.getItem(IS_LOCAL_MENU_MINIMIZED);
 
   if (!isLocalMenuMinimized) {

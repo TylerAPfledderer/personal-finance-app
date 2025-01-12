@@ -26,6 +26,7 @@ const { size, ...props } = defineProps<
 </script>
 <template>
   <Avatar.Root>
+    <Avatar.Fallback />
     <Avatar.Image
       v-bind="mergeProps(props, $attrs)"
       :class="avatarStyles({ size })"
