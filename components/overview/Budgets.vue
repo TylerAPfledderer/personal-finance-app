@@ -66,10 +66,10 @@ onMounted(() => {
           <div class="absolute inset-0 grid place-items-center">
             <div class="grid justify-items-center gap-2">
               <div class="text-preset-1">
-                {{ formatCurrency(budgetCurr) }}
+                {{ formatCurrency(budgetCurr, "noDecimal") }}
               </div>
               <div class="text-preset-5 text-grey-500">
-                of {{ formatCurrency(budgetMaximum) }} limit
+                of {{ formatCurrency(budgetMaximum, "noDecimal") }} limit
               </div>
             </div>
           </div>

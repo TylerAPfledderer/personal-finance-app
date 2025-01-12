@@ -16,7 +16,10 @@ const limitedTransactionList = computed(() => transactions.value.slice(0, 5));
           class="flex border-grey-100 [&:not(:last-of-type)]:border-b [&:not(:last-of-type)]:pb-5"
         >
           <div class="flex w-full items-center gap-4">
-            <UiAvatar size="sm" :src="transaction.avatar" />
+            <UiAvatar
+              :size="{ initial: 'sm', md: 'md' }"
+              :src="transaction.avatar"
+            />
             <div class="text-preset-4-bold">{{ transaction.name }}</div>
           </div>
           <div class="grid min-w-[71px] gap-2">
