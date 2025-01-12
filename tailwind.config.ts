@@ -1,8 +1,9 @@
 import type { Config } from "tailwindcss";
 import { colors } from "./tokens/colors";
 import { fontFamily, fontSize } from "./tokens/typography";
+import { withTV } from "tailwind-variants/transformer";
 
-export default {
+export default withTV<Config>({
   content: [
     "./tokens/**/*.vue",
     "./pages/**/*.vue",
@@ -30,4 +31,4 @@ export default {
     },
   },
   plugins: [],
-} satisfies Config;
+});
