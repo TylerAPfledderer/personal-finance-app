@@ -5,6 +5,7 @@
       <OverviewPots />
       <OverviewTransactions class="lg:row-[2_/_4]" />
       <OverviewBudgets class="lg:row-[1_/_3]" />
+      <OverviewRecurringBills />
     </div>
   </div>
 </template>
