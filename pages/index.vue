@@ -18,15 +18,15 @@
   }
 
   & > :nth-child(2) {
-    @apply xl:order-3 2xl:row-[2/6];
+    @apply xl:order-3 xl:row-[2/6];
   }
 
   & > :nth-child(3) {
-    @apply xl:order-2 2xl:col-[2] 2xl:row-[1/5];
+    @apply xl:order-2 xl:col-[2] xl:row-[1/5];
   }
 
   & > :nth-child(4) {
-    @apply xl:order-4 2xl:col-[2] 2xl:row-[5/6];
+    @apply xl:order-4 xl:col-[2] xl:row-[5/6];
   }
 }
 </style>
