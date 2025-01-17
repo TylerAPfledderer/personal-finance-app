@@ -1,7 +1,10 @@
 <script lang="ts" setup>
-import { Pagination } from "@ark-ui/vue";
+import {
+  Pagination,
+  type PaginationRootProps,
+  type PaginationRootEmits,
+} from "@ark-ui/vue";
 import { tv, cnBase } from "tailwind-variants";
-import data from "~/data.json";
 
 const commonButtonClassStyles =
   "px-4 py-2 border border-beige-500 rounded-lg [&:not([disabled])]:hover:bg-beige-500 [&:not([disabled])]:hover:text-white";
@@ -20,12 +23,15 @@ const paginationStyles = tv({
     ellipsis: cnBase(commonButtonClassStyles, ""),
   },
 })();
+
+const props = defineProps<PaginationRootProps>();
+const emit = defineEmits<PaginationRootEmits>();
 </script>
 <template>
   <Pagination.Root
+    @page-change="(details) => emit('pageChange', details)"
     :class="paginationStyles.root()"
-    :count="data.transactions.length"
-    :page-size="10"
+    v-bind="props"
   >
     <Pagination.PrevTrigger
       :class="paginationStyles.trigger()"
@@ -34,27 +40,32 @@ const paginationStyles = tv({
       <IconCaretLeft />
       <span class="max-sm:hidden"> Prev </span>
     </Pagination.PrevTrigger>
-    <div class="flex gap-2">
+    <div class="flex items-center gap-2">
       <Pagination.Context v-slot="pagination">
-        <template v-for="(page, index) in pagination.pages">
-          <Pagination.Item
-            v-if="page.type === 'page'"
-            :key="index"
-            :value="page.value"
-            :type="page.type"
-            :class="paginationStyles.item()"
-          >
-            {{ page.value }}
-          </Pagination.Item>
-          <Pagination.Ellipsis
-            v-else
-            :key="'e' + index"
-            :class="paginationStyles.ellipsis()"
-            :index="index"
-          >
-            &#8230;
-          </Pagination.Ellipsis>
-        </template>
+        <div class="contents sm:hidden">
+          {{ pagination.page }} of {{ pagination.totalPages }}
+        </div>
+        <div class="contents max-sm:hidden">
+          <template v-for="(page, index) in pagination.pages">
+            <Pagination.Item
+              v-if="page.type === 'page'"
+              :key="index"
+              :value="page.value"
+              :type="page.type"
+              :class="paginationStyles.item()"
+            >
+              {{ page.value }}
+            </Pagination.Item>
+            <Pagination.Ellipsis
+              v-else
+              :key="'e' + index"
+              :class="paginationStyles.ellipsis()"
+              :index="index"
+            >
+              &#8230;
+            </Pagination.Ellipsis>
+          </template>
+        </div>
       </Pagination.Context>
     </div>
     <Pagination.NextTrigger
