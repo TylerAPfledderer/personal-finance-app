@@ -18,12 +18,12 @@ const links: Array<Omit<SidebarItemProps, "minimized">> = [
     url: "/",
     label: "Overview",
   },
+  {
+    icon: IconNavTransactions,
+    url: "/transactions",
+    label: "Transactions",
+  },
   /* Uncomment once pages are available */
-  // {
-  //   icon: IconNavTransactions,
-  //   url: "/transactions",
-  //   label: "Transactions",
-  // },
   // {
   //   icon: IconNavBudgets,
   //   url: "/budgets",

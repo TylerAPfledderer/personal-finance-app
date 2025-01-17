@@ -15,7 +15,6 @@ defineProps<SidebarItemProps>();
       :to="url"
       :aria-label="label"
       class="grid justify-items-center gap-4 border-[transparent] pb-3 pt-2 hover:text-grey-100 max-lg:border-b-4 lg:flex lg:border-s-4 lg:px-8 lg:py-4"
-      :class="{ 'router-link-active': url === '/' }"
     >
       <component :is="icon" class="!mb-0 text-[18px]" />
 
