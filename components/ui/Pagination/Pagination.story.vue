@@ -1,5 +1,5 @@
 <template>
   <Story title="ui / Pagination">
-    <UiPagination />
+    <UiPagination :count="50" />
   </Story>
 </template>
