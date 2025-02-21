@@ -1,12 +1,8 @@
-<script
-  lang="ts"
-  setup
-  generic="Model extends { label: string; value: string }"
->
+<script lang="ts" setup>
 import { Select, type SelectRootProps } from "@ark-ui/vue";
 import { selectStyles } from "../../ui/fields/primitives/Select.vue";
 
-type FilterSelectRootProps = SelectRootProps<Model>;
+type FilterSelectRootProps = SelectRootProps<{ label: string; value: string }>;
 
 const changedSort = defineModel<FilterSelectRootProps["modelValue"]>();
 
