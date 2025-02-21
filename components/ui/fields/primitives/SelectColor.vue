@@ -9,12 +9,9 @@ export const selectStyles = tv({
   slots: {
     trigger: cnBase(
       inputClasses,
-      "relative inline-flex w-full items-center justify-between gap-8 ps-500",
+      "inline-flex w-full items-center justify-between gap-8 ps-500",
     ),
     menu: "overflow-visible rounded-lg bg-white p-150 shadow-[0px_4px_24px_0_rgba(0,0,0,0.25)]",
-    itemGroup: "grid gap-3",
-    item: "border-grey-100 [&:not(:last-of-type)]:border-b [&:not(:last-of-type)]:pb-3",
-    itemText: "[&[data-state=checked]]:text-preset-4-bold",
   },
 });
 

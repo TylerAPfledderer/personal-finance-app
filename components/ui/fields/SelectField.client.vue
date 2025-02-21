@@ -3,7 +3,7 @@ import { mergeProps } from "vue";
 import FieldWrapper, {
   type FieldWrapperProps,
 } from "./FieldWrapper.client.vue";
-import UISelect, { type SelectProps } from "./primitives/Select.vue";
+import UISelect, { type SelectProps } from "./primitives/SelectColor.vue";
 
 defineOptions({
   inheritAttrs: false,

@@ -462,3 +462,10 @@ export const useFinanceStore = defineStore("financeStore", () => {
 
   return { balance, budgets, pots, transactions };
 });
+
+/**
+ * The `transactions` object type returned from the store
+ */
+export type TransactionsType = ReturnType<
+  typeof useFinanceStore
+>["transactions"];
