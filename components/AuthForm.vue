@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { cnBase } from "tailwind-variants";
 
-const {} = useSupabaseClient<Database>();
+// const {} = useSupabaseClient<Database>();
 
-const { auth } = useTypedSupabaseClient();
+// const { auth } = useTypedSupabaseClient();
 
 const router = useRouter();
 

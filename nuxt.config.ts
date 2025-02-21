@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "nuxt-svgo",
     "@vueuse/nuxt",
-    "@nuxtjs/supabase",
+    // "@nuxtjs/supabase",
     "@pinia/nuxt",
   ],
 
@@ -48,7 +48,7 @@ export default defineNuxtConfig({
     componentPrefix: "icon",
   },
 
-  supabase: {
-    redirect: false,
-  },
+  // supabase: {
+  //   redirect: false,
+  // },
 });

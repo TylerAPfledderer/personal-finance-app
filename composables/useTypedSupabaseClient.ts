@@ -1,5 +1,3 @@
-import { useSupabaseClient, type Database } from "#imports";
+// import { useSupabaseClient, type Database } from "#imports";
 
-export const useTypedSupabaseClient = () => {
-  return useSupabaseClient<Database>();
-};
+// export const useTypedSupabaseClient = useSupabaseClient<Database>;
