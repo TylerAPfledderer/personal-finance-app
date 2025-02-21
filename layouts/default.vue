@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { VNodeRef } from "vue";
 
-const defaultLayoutAttrs = useAttrs();
+const defaultLayoutAttrs = useAttrs() as { defaultLayoutLabel: string };
 const sidebarRef = ref<VNodeRef | null>(null);
 const { height } = useElementSize(sidebarRef);
 </script>
@@ -13,9 +13,9 @@ const { height } = useElementSize(sidebarRef);
   >
     <Sidebar ref="sidebarRef" />
     <main
-      class="grid grid-cols-subgrid gap-8 px-4 py-6 max-lg:mb-[--sidebar-height] md:px-10 md:py-8 lg:h-[100vh] lg:overflow-y-scroll"
+      class="grid grid-cols-subgrid grid-rows-[min-content,_1fr] gap-8 px-4 py-6 max-lg:mb-[--sidebar-height] md:px-10 md:py-8 lg:h-[100vh] lg:overflow-y-scroll"
     >
-      <h1 class="text-preset-1">
+      <h1 class="py-2 text-preset-1">
         {{ defaultLayoutAttrs.defaultLayoutLabel }}
       </h1>
       <slot></slot>
