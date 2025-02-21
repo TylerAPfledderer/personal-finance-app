@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { Chart as ChartJS, Tooltip, ArcElement } from "chart.js";
 import { Doughnut } from "vue-chartjs";
+import { filterCategories } from "../transactions/utils/constants";
 
 ChartJS.register(Tooltip, ArcElement);
 const financeStore = useFinanceStore();
@@ -26,7 +27,7 @@ const budgetCurr = computed(() =>
 
 const limitedBudgetList = computed(() =>
   budgets.value.slice(0, 4).map(({ category, theme, maximum }) => ({
-    name: category,
+    name: filterCategories.find((cat) => cat.value === category)!.label,
     theme,
     amount: maximum,
   })),
