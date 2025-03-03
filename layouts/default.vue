@@ -4,12 +4,18 @@ import type { VNodeRef } from "vue";
 const defaultLayoutAttrs = useAttrs() as { defaultLayoutLabel: string };
 const sidebarRef = ref<VNodeRef | null>(null);
 const { height } = useElementSize(sidebarRef);
+
+const { isMinimized } = useSidebarMinimized();
 </script>
 <template>
-  <!--TODO: Fix from pushing the body out the screen and squashing containers-->
   <div
     :style="{ '--sidebar-height': `${height}px` }"
-    class="grid lg:grid-cols-[minmax(max-content,300px),1fr]"
+    class="grid"
+    :class="
+      isMinimized
+        ? 'lg:grid-cols-[max-content,1fr]'
+        : 'lg:grid-cols-[max(300px),1fr]'
+    "
   >
     <Sidebar ref="sidebarRef" />
     <main
