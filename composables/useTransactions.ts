@@ -23,6 +23,8 @@ export const useTransactions = () => {
     filterCategories[0].value,
   ]);
 
+  const currentSearchValue = ref<string>("");
+
   const sortedList = computed(() =>
     sortTransactions(transactions.value, currentSortValue.value[0]),
   );
@@ -36,9 +38,15 @@ export const useTransactions = () => {
     ),
   );
 
+  const searchedList = computed(() =>
+    filter(filteredList.value, (item) =>
+      item.name.toLowerCase().includes(currentSearchValue.value.toLowerCase()),
+    ),
+  );
+
   const currentPageList = computed<TransactionsType>(() => {
     const transactionsWithHumanCat = computed(() => {
-      return filteredList.value.map((transaction) => ({
+      return searchedList.value.map((transaction) => ({
         ...transaction,
         category: filterCategories.find(
           (cat) => cat.value === transaction.category,
@@ -54,7 +62,8 @@ export const useTransactions = () => {
     currentPage,
     currentSortValue,
     currentCategoryValue,
-    filteredList,
+    currentSearchValue,
+    searchedList,
     currentPageList,
   };
 };

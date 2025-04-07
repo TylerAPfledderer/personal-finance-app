@@ -16,7 +16,7 @@ defineProps<
   <Select.Root
     v-model="changedSort"
     :items
-    class="relative flex items-center gap-2"
+    class="relative flex w-max items-center gap-2"
   >
     <Select.Label class="text-grey-500 max-sm:sr-only">{{
       label

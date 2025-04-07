@@ -1,6 +1,6 @@
 <script lang="ts">
 export type FieldWrapperProps = {
-  label: string;
+  label?: string;
   helper?: string;
   errorMessage?: string;
 };
@@ -13,16 +13,16 @@ defineProps<FieldWrapperProps>();
 </script>
 <template>
   <FieldRoot class="grid gap-2">
-    <FieldLabel class="text-preset-4-bold text-grey-500">
+    <FieldLabel v-if="label" class="text-preset-4-bold text-grey-500">
       {{ label }}
     </FieldLabel>
     <slot></slot>
     <FieldHelperText
-      v-show="helper"
+      v-if="helper"
       class="justify-self-end text-preset-5 text-grey-500"
     >
       {{ helper }}
     </FieldHelperText>
-    <span class="text-red">{{ errorMessage }}</span>
+    <span v-if="errorMessage" class="text-red">{{ errorMessage }}</span>
   </FieldRoot>
 </template>

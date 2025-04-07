@@ -16,7 +16,7 @@ defineOptions({
   inheritAttrs: false,
 });
 
-const props = defineProps<InputProps>();
+const { leftElement, rightElement, ...inputProps } = defineProps<InputProps>();
 
 const model = defineModel<InputHTMLAttributes["value"]>();
 
@@ -31,13 +31,14 @@ const field = useFieldContext();
       <component :is="leftElement" />
     </span>
     <input
-      v-bind="mergeProps(props, field.getInputProps(), $attrs)"
+      v-bind="mergeProps(inputProps, field.getInputProps(), $attrs)"
       v-model="model"
       :class="
         cnBase(
           inputClasses,
-          !!props.leftElement && 'ps-500',
-          !!props.rightElement && 'pe-500',
+          'w-full text-ellipsis',
+          !!leftElement && 'ps-500',
+          !!rightElement && 'pe-500',
         )
       "
     />

@@ -1,13 +1,12 @@
-<template>
-  <div>
-    
-  </div>
-</template>
+<script setup lang="ts">
+import { IconSearch } from "#components";
 
-<script lang="ts" setup>
-
+const modal = defineModel<string>();
 </script>
-
-<style>
-
-</style>
+<template>
+  <UiInputField
+    v-model="modal"
+    placeholder="Search transaction"
+    :right-element="IconSearch"
+  />
+</template>
