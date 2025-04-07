@@ -32,10 +32,10 @@ defineEmits(["submit"]);
         )
       "
     >
-      <slot name="form-fields"></slot>
+      <slot name="form-fields" />
     </div>
     <div class="contents">
-      <slot name="form-buttons"></slot>
+      <slot name="form-buttons" />
     </div>
   </form>
 </template>

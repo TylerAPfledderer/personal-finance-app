@@ -32,6 +32,6 @@ defineProps<{
         "
       />
     </div>
-    <slot></slot>
+    <slot />
   </div>
 </template>

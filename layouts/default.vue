@@ -24,7 +24,7 @@ const { isMinimized } = useSidebarMinimized();
       <h1 class="py-2 text-preset-1">
         {{ defaultLayoutAttrs.defaultLayoutLabel }}
       </h1>
-      <slot></slot>
+      <slot />
     </main>
   </div>
 </template>

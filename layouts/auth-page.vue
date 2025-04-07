@@ -29,7 +29,7 @@
       </div>
     </header>
     <main class="flex h-full items-center justify-center px-4">
-      <slot></slot>
+      <slot />
     </main>
   </div>
 </template>

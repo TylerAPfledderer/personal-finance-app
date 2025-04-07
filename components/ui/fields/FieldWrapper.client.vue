@@ -16,7 +16,7 @@ defineProps<FieldWrapperProps>();
     <FieldLabel v-if="label" class="text-preset-4-bold text-grey-500">
       {{ label }}
     </FieldLabel>
-    <slot></slot>
+    <slot />
     <FieldHelperText
       v-if="helper"
       class="justify-self-end text-preset-5 text-grey-500"
