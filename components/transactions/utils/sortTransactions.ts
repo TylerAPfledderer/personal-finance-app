@@ -5,10 +5,6 @@ export const sortTransactions = (
   transactions: TransactionsType,
   sortType: SortOptionsValues,
 ) => {
-  if (sortType === "latest") {
-    return sortBy(transactions, "date").reverse();
-  }
-
   if (sortType === "oldest") {
     return sortBy(transactions, "date");
   }
@@ -28,4 +24,6 @@ export const sortTransactions = (
   if (sortType === "lowest") {
     return sortBy(transactions, "amount");
   }
+
+  return sortBy(transactions, "date").reverse();
 };

@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import capitalize from "lodash/capitalize";
+import { useChangeCase } from "@vueuse/integrations/useChangeCase";
 
 const financeStore = useFinanceStore();
 
 const { balance } = storeToRefs(financeStore);
+
+const capitalizeLabel = (label: string) => useChangeCase(label, "capitalCase");
 </script>
 <template>
   <!--Balance Group-->
@@ -17,7 +19,9 @@ const { balance } = storeToRefs(financeStore);
         :class="label === 'current' ? 'bg-grey-900 text-white' : 'bg-white'"
       >
         <div>
-          {{ capitalize(label === "current" ? `${label} balance` : label) }}
+          {{
+            capitalizeLabel(label === "current" ? `${label} balance` : label)
+          }}
         </div>
         <div class="text-preset-1">{{ formatCurrency(amount) }}</div>
       </div>

@@ -1,5 +1,4 @@
 import chunk from "lodash/chunk";
-import filter from "lodash/filter";
 
 import {
   filterCategories,
@@ -45,19 +44,15 @@ export const useTransactions = () => {
     sortTransactions(transactions.value, currentSortValue.value[0]),
   );
 
-  const filteredList = computed(() =>
-    filter(
-      sortedList.value,
-      (item) =>
-        currentCategoryValue.value[0] === "all_transactions" ||
-        item.category.includes(currentCategoryValue.value[0]),
-    ),
+  const filteredList = useArrayFilter(
+    sortedList,
+    (item) =>
+      currentCategoryValue.value[0] === "all_transactions" ||
+      item.category.includes(currentCategoryValue.value[0]),
   );
 
-  const searchedList = computed(() =>
-    filter(filteredList.value, (item) =>
-      item.name.toLowerCase().includes(currentSearchValue.value.toLowerCase()),
-    ),
+  const searchedList = useArrayFilter(filteredList, (item) =>
+    item.name.toLowerCase().includes(currentSearchValue.value.toLowerCase()),
   );
 
   const currentPageList = computed<TransactionsType>(() => {
