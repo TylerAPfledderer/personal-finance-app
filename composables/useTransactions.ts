@@ -18,12 +18,27 @@ export const useTransactions = () => {
 
   const { transactions } = storeToRefs(financeStore);
 
+  /**
+   * Sets the current sort type. There should only be one value supplied in the array.
+   *
+   * @default ["latest"]
+   */
   const currentSortValue = ref<[SortOptionsValues]>([SORT_OPTIONS[0].value]);
 
+  /**
+   * The current selected category type. There should only be one value supplied in the array.
+   *
+   * @default ["all_transactions"]
+   */
   const currentCategoryValue = ref<[FilterOptionsValues]>([
     filterCategories[0].value,
   ]);
 
+  /**
+   * Used for filtering with text input.
+   *
+   * This search value is only applied to recipient/sender name.
+   */
   const currentSearchValue = ref<string>("");
 
   const sortedList = computed(() =>
