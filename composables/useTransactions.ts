@@ -45,15 +45,14 @@ export const useTransactions = () => {
   );
 
   const currentPageList = computed<TransactionsType>(() => {
-    const transactionsWithHumanCat = computed(() => {
-      return searchedList.value.map((transaction) => ({
-        ...transaction,
-        category: filterCategories.find(
-          (cat) => cat.value === transaction.category,
-        )!.label,
-      }));
-    });
-    const transactionListChunk = chunk(transactionsWithHumanCat.value, 10);
+    const transactionsWithHumanCat = searchedList.value.map((transaction) => ({
+      ...transaction,
+      category: filterCategories.find(
+        (cat) => cat.value === transaction.category,
+      )!.label,
+    }));
+
+    const transactionListChunk = chunk(transactionsWithHumanCat, 10);
 
     return transactionListChunk[currentPage.value - 1];
   });
