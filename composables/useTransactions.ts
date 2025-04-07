@@ -12,6 +12,7 @@ import type {
 } from "~/components/transactions/utils/types";
 
 export const useTransactions = () => {
+  // TODO update current page when filter or sort is deployed where if the user is on a page that no longer exists, send user back to the first page.
   const currentPage = ref(1);
   const financeStore = useFinanceStore();
 
