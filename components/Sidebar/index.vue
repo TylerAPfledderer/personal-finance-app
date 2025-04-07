@@ -74,7 +74,7 @@ const { isMinimized, toggleMinimizedMenu } = useSidebarMinimized();
       @click="toggleMinimizedMenu"
     >
       <IconMinimizeMenu
-        class="!m-0 text-[24px]"
+        class="!m-0 text-[1.5rem]"
         :class="isMinimized && 'rotate-180'"
       />
       <span v-show="!isMinimized && isLargerThanLg">Minimize Menu</span>

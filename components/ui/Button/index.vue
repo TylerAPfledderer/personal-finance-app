@@ -29,7 +29,7 @@ const props = defineProps<ButtonProps>();
   <button :class="buttonStyles({ variant: props.variant })">
     <span>{{ label }}</span>
     <div v-if="props.variant === 'tertiary'">
-      <IconCaretRight class="text-[12px]" />
+      <IconCaretRight class="text-[0.75rem]" />
     </div>
   </button>
 </template>

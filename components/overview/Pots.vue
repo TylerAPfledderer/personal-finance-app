@@ -22,7 +22,7 @@ const limitedPotList = computed(() =>
       <!--Total Saved-->
       <div class="flex w-full items-center gap-4 rounded-xl bg-beige-100 p-4">
         <div>
-          <IconPot class="text-[40px] text-green" />
+          <IconPot class="text-[2.5rem] text-green" />
         </div>
         <div class="grid gap-3">
           <div>Total Saved</div>
