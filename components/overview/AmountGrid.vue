@@ -1,5 +1,9 @@
 <script lang="ts" setup>
-defineProps<{ list: { name: string; amount: number; theme: string }[] }>();
+type AmountGridProps = {
+  list: { name: string; amount: number; theme: string }[];
+};
+
+defineProps<AmountGridProps>();
 </script>
 <template>
   <div class="grid w-full grid-cols-2 gap-4">
