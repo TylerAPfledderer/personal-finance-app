@@ -2,7 +2,7 @@
 export type SidebarItemProps = {
   url: `/${string | undefined}`;
   label: Capitalize<string>;
-  icon: Object;
+  icon: object;
   minimized: boolean;
 };
 </script>
