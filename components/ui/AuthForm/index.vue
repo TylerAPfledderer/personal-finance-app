@@ -15,7 +15,7 @@ onMounted(() => {
   console.log(router);
 });
 
-defineEmits(["submit"]);
+defineEmits<{ (e: "submit", payload: Event): void }>();
 </script>
 <template>
   <form
