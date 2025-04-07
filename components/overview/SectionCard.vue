@@ -1,12 +1,15 @@
 <script lang="ts" setup>
+import { useChangeCase } from "@vueuse/integrations/useChangeCase";
 import capitalize from "lodash/capitalize";
 
-defineProps<{
+const props = defineProps<{
   heading: string;
   linkProps: {
     label: string;
   };
 }>();
+
+const transformedHeading = useChangeCase(props.heading, "capitalCase");
 </script>
 <template>
   <div
@@ -14,12 +17,7 @@ defineProps<{
   >
     <div class="flex items-center justify-between">
       <h2 class="text-preset-2">
-        {{
-          heading
-            .split(" ")
-            .map((string) => capitalize(string))
-            .join(" ")
-        }}
+        {{ transformedHeading }}
       </h2>
       <UiButton
         variant="tertiary"
