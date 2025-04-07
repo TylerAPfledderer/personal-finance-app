@@ -46,7 +46,10 @@ const emit = defineEmits<PaginationRootEmits>();
           {{ pagination.page }} of {{ pagination.totalPages }}
         </div>
         <div class="contents max-sm:hidden">
-          <template v-for="(page, index) in pagination.pages">
+          <template
+            v-for="(page, index) in pagination.pages"
+            :key="JSON.stringify(page)"
+          >
             <Pagination.Item
               v-if="page.type === 'page'"
               :key="index"

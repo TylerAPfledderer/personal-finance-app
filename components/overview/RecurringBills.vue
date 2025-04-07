@@ -23,7 +23,7 @@ const recurringBills = ref([
     heading="recurring bills"
     :link-props="{ label: 'see details' }"
   >
-    <template v-for="section in recurringBills">
+    <template v-for="section in recurringBills" :key="JSON.stringify(section)">
       <div
         :style="{ '--section-theme': `var(${section.theme})` }"
         class="flex justify-between rounded-lg border-s-4 border-[--section-theme] bg-beige-100 px-4 py-5"

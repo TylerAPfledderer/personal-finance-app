@@ -11,7 +11,10 @@ const limitedTransactionList = computed(() => transactions.value.slice(0, 5));
     :link-props="{ label: 'View All' }"
   >
     <div class="grid gap-5">
-      <template v-for="transaction in limitedTransactionList">
+      <template
+        v-for="transaction in limitedTransactionList"
+        :key="JSON.stringify(transaction)"
+      >
         <div
           class="flex border-grey-100 [&:not(:last-of-type)]:border-b [&:not(:last-of-type)]:pb-5"
         >

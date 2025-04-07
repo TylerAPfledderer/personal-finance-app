@@ -40,10 +40,10 @@ defineProps<
         :class="selectStyles().menu({ class: 'w-max px-250 py-150' })"
       >
         <div :class="selectStyles().itemGroup()">
-          <template v-for="{ label, value } in items" :key="value">
-            <Select.Item :item="value" :class="selectStyles().item()">
+          <template v-for="item in items" :key="JSON.stringify(item)">
+            <Select.Item :item="item.value" :class="selectStyles().item()">
               <Select.ItemText :class="selectStyles().itemText()">
-                {{ label }}
+                {{ item.label }}
               </Select.ItemText>
             </Select.Item>
           </template>
